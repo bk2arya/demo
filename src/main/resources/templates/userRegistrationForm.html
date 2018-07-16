@@ -1,0 +1,59 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org">
+  <head>
+    <title tiles:fragment="title">Messages : Create</title>
+  </head>
+  <body>
+    <div tiles:fragment="content">
+        <form name="f" th:action="@{/register}" th:object="${userObject}" method="post">               
+            <fieldset>
+                <legend>Please Login</legend>
+                
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username"/>    
+                    
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password"/> 
+                
+                <label for="password">First Name</label>
+                <input type="text" id="firstName" name="firstName"/> 
+                
+                <label for="password">Last Name</label>
+                <input type="text" id="lastName" name="lastName"/> 
+                
+                <label for="password">Email Id</label>
+                <input type="text" id="emailId" name="emailId"/> 
+                
+                <label for="password">Contact No</label>
+                <input type="text" id="contactNo" name="contactNo"/>  
+   
+
+  
+                <div class="form-actions">
+                    <button type="submit" class="btn">Register</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+  </body>
+</html>
+
+<!-- <!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Form</h1>
+    <form action="#" th:action="@{/register}" th:object="${userObject}" method="POST">
+    <p>First Name: <input type="text" th:field="*{firstName}" /></p>
+    <p>Email ID: <input type="text" th:field="*{emailId}" /></p>
+    	<p>User Name: <input type="text" th:field="*{id}" /></p>
+        <p>Password: <input type="text" th:field="*{content}" /></p>
+        <p>email Id: <input type="text" th:field="*{content}" /></p>
+        <p>Phone no: <input type="text" th:field="*{content}" /></p>
+        
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html> -->
